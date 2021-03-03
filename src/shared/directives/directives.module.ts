@@ -9,6 +9,8 @@ import { HighlightDirective } from './highlight.directive';
   imports: [
     CommonModule
   ],
-  exports: [HighlightDirective]
+  exports: [
+    HighlightDirective
+  ]
 })
 export class DirectivesModule { }
