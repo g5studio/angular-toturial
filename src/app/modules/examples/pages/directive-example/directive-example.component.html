@@ -1,3 +1,3 @@
-<p [appHighlight]="this.value">{{this.value}}</p>
-<button (click)="this.value = this.value + 1">+</button>
-<button (click)="this.value = this.value - 1">-</button>
+<ng-container *ngIf="this.candle$ | async as candle">
+    <h1 [appHighlight]="candle">{{candle}}</h1>
+</ng-container>
