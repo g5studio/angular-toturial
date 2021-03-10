@@ -1,0 +1,24 @@
+@import "variables";
+
+.Layout {
+  overflow: hidden;
+}
+
+@media screen and (max-width: map-get($grid-breakpoints,"md")) {
+  .Layout {
+    padding: 0;
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints,"md")) {
+  .Layout {
+    max-width: map-get($container-max-widths, "xl");
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints,"xxl")) {
+  .Layout {
+    max-width: map-get($container-max-widths, "xxl");
+  }
+}

@@ -1,6 +1,31 @@
+@import "variables";
+
 .Header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  &__Logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & > img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    & > h1 {
+      font-size: map-get($font-level, "xl");
+      color: $logo-bg;
+    }
+
+    & > p {
+      font-size: map-get($font-level, "sm");
+      color: $gray-blue;
+    }
+  }
+
+  & > em {
+    font-size: map-get($font-level, "lgx");
+  }
 }
