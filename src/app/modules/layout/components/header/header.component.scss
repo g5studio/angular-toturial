@@ -24,8 +24,4 @@
       color: $gray-blue;
     }
   }
-
-  & > em {
-    font-size: map-get($font-level, "lgx");
-  }
 }

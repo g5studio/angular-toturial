@@ -1,0 +1,25 @@
+<div class="Menu" *ngIf="this.$window.device$ | async as device">
+  <ng-template *ngTemplateOutlet="device !== this.deviceType.Desktop ? tHamburger : tMenu"></ng-template>
+</div>
+
+<ng-template #tMenu>
+  <ul>
+    <li (click)="this.router.navigateByUrl('examples/directive')">
+      <p>Directive</p>
+    </li>
+    <li (click)="this.collapse()">
+      <em class="icon-setting"></em>
+      系統設置
+    </li>
+  </ul>
+</ng-template>
+
+<ng-template #tHamburger>
+  <div #tMobileMenu>
+    <em (click)="this.expand(tMobileMenu)" class="icon-list"></em>
+    <div *ngIf="this.isOpen" class="Menu__Mobile">
+      <ng-template *ngTemplateOutlet="tMenu"></ng-template>
+    </div>
+  </div>
+  <div *ngIf="this.isOpen" class="Menu__Mask"></div>
+</ng-template>

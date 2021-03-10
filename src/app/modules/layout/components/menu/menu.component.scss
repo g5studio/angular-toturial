@@ -1,0 +1,82 @@
+@import "variables";
+
+.Menu {
+  & > ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    & > li {
+      font-size: 0;
+      & > em {
+        font-size: map-get($font-level, "lgx");
+      }
+      padding-right: 1rem;
+      margin-left: 1rem;
+      &:not(:last-child) {
+        border-right: 1px solid $gray-blue;
+      }
+      & > p {
+        color: $dark-gray-blue;
+        font-size: map-get($font-level, "md");
+      }
+      &:hover {
+        cursor: pointer;
+        & > p {
+          color: $logo-bg;
+        }
+      }
+    }
+  }
+
+  &__Mask {
+    z-index: 4;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    opacity: 0.6;
+  }
+
+  &__Mobile {
+    position: fixed;
+    z-index: map-get($layout-level, "important");
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    background-color: $white;
+    padding: 1rem 0;
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      & > li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 1rem;
+        font-size: map-get($font-level, "xs");
+        color: $dark-gray-blue;
+        & > em {
+          font-size: map-get($font-level, "md");
+          margin-right: 0.25rem;
+        }
+
+        &:not(:last-child) {
+          padding-bottom: 0.25rem;
+          margin-bottom: 0.25rem;
+          border-bottom: 1px solid $sliver;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, "md")) {
+  .Menu {
+    &__Mobile {
+      width: 30vw;
+    }
+  }
+}
