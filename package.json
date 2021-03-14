@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 6931",
-    "build": "ng build",
+    "build": "ng build --prod --base-href https://g5studio.github.io/angular-tutorial/",
+    "deploy": "ngh --dir dist/angular-tutorial",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,6 +22,7 @@
     "@angular/router": "~10.1.1",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
+    "angular-cli-ghpages": "^1.0.0-rc.1",
     "bootstrap": "^4.6.0",
     "ngx-translate": "0.0.1-security",
     "resize-observer": "^1.0.0",
