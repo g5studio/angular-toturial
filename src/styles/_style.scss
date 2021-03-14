@@ -2,7 +2,9 @@
 @import "colors";
 @import "mixins";
 @import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 @import "root";
+@import "custom-forms";
 
 .scroll-bar {
   @include scroll();

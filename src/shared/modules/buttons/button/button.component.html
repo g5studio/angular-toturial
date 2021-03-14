@@ -1,0 +1,4 @@
+<button [type]="this.type" [class.justify-content-center]="this.center !== undefined"
+  [class.white]="this.white !== undefined" [disabled]='this.disabled' (click)='this.clickEvent.emit()'>
+  <ng-content></ng-content>
+</button>

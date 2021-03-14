@@ -6,13 +6,12 @@
   user-select: none;
 }
 
-a {
-  cursor: pointer;
+input {
+  user-select: text;
 }
 
-button:focus,
-input:focus {
-  outline: none;
+a {
+  cursor: pointer;
 }
 
 ul {
@@ -45,7 +44,7 @@ ul {
 }
 
 input {
-    user-select: auto;
+  user-select: auto;
 }
 
 button {
@@ -58,7 +57,7 @@ button {
   font-weight: normal;
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   font-weight: normal;
   border-radius: 3px;
   cursor: pointer;
@@ -90,6 +89,6 @@ em {
   font-size: 1rem;
   color: $dark-gray-blue;
   &:hover {
-    color: $logo-bg;
+    color: $primary;
   }
 }

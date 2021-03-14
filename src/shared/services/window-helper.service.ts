@@ -21,7 +21,7 @@ export class WindowHelperService {
   constructor() { }
 
   get isMobileDevice() { return MOBILE_AGENT.some(agent => window.navigator.userAgent.includes(agent)); }
-
+  get deviceType(): typeof EDevice { return EDevice; }
   public pageWidth: number;
 
   private device: ReplaySubject<EDevice> = new ReplaySubject();

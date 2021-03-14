@@ -68,6 +68,14 @@
           margin-bottom: 0.25rem;
           border-bottom: 1px solid $sliver;
         }
+
+        &:hover {
+          cursor: pointer;
+          color: $logo-bg;
+          em {
+            color: $logo-bg;
+          }
+        }
       }
     }
   }

@@ -1,0 +1,54 @@
+@import "variables";
+@import "mixins";
+
+.RxjsForm {
+  width: 17.5rem;
+  ul {
+    & > li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $blue-layer-7;
+      &:not(:first-child) {
+        margin-top: 2rem;
+      }
+      & > input {
+        border: 0;
+        width: 100%;
+        color: $blue-layer-5;
+        background-color: inherit;
+        font-size: map-get($font-level, "sm");
+        &::placeholder {
+          color: $blue-layer-7;
+          opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+          color: $blue-layer-7;
+        }
+
+        &::-ms-input-placeholder {
+          color: $blue-layer-7;
+        }
+      }
+
+      & > input ~ label {
+        display: inline-flex;
+        margin-bottom: 0;
+        & > em {
+          color: $blue-layer-7;
+          font-size: 1.3rem;
+          cursor: auto;
+        }
+      }
+    }
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "md")) {
+  .RxjsForm {
+    width: 100%;
+  }
+}

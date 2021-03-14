@@ -1,0 +1,49 @@
+@import "variables";
+@import "mixins";
+
+.Dropdown {
+  position: relative;
+  & > button {
+    padding-right: 1.75rem;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 0.75rem;
+      content: "\e917";
+      color: $midnight;
+      font-family: "icomoon" !important;
+      transform: translateY(-50%);
+      transition: 0.5s;
+    }
+  }
+  &--active {
+    &::before {
+      transform: translateY(-50%) rotate(180deg) !important;
+      transition: 0.5s;
+    }
+  }
+
+  &__Container {
+    position: absolute;
+    padding: 0.25rem 0;
+    z-index: map-get($layout-level, "menu");
+    @include dropdown-shadow();
+    @include scroll();
+    max-height: 17rem;
+    background-color: $white;
+    width: 100%;
+    top: calc(100% + 0.25rem);
+  }
+
+  &::ng-deep {
+    ul {
+      li {
+        padding: 0 0.5rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid $light-gray;
+        }
+      }
+    }
+  }
+}

@@ -134,3 +134,11 @@ ul,
 ol {
   margin: 0 !important;
 }
+
+input,
+input:focus,
+button,
+button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}

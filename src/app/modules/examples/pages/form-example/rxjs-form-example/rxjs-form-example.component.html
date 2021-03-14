@@ -1,0 +1,21 @@
+<form class="RxjsForm mt-3">
+  <ul>
+    <li>
+      <input (change)="this.nameField.next($event.target.value)" class="form-control mr-2" id="name" type="text">
+      <label for="name">
+        <em class="icon-man"></em>
+      </label>
+    </li>
+    <li>
+      <input (change)="this.passwordField.next($event.target.value)" class="form-control" id="password" type="password">
+      <label for="password">
+        <em class="icon-unlock"></em>
+      </label>
+    </li>
+  </ul>
+  <div class="mt-6">
+    <app-button center [disabled]="!this.valid" [type]="'submit'">
+      Login
+    </app-button>
+  </div>
+</form>

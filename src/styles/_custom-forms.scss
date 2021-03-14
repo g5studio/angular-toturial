@@ -1,0 +1,65 @@
+@import "variables";
+
+.form-control {
+  height: 2.5rem;
+  &:disabled,
+  &[readonly] {
+    -webkit-text-fill-color: $gray-blue;
+    border-color: $light-gray;
+    color: $gray-blue;
+  }
+  &.area {
+    height: 5rem;
+  }
+
+  &:focus {
+    border-color: $primary !important;
+  }
+
+  // hide number arrow
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.custom-checkbox {
+  user-select: none;
+  .custom-control-input:disabled {
+    ~ .custom-control-label {
+      cursor: not-allowed;
+    }
+    &:checked ~ .custom-control-label::before {
+      background-color: $gray-blue;
+      border-color: $gray-blue;
+    }
+    &:indeterminate ~ .custom-control-label::before {
+      background-color: $gray-blue;
+      border-color: $gray-blue;
+    }
+  }
+}
+
+.custom-radio {
+  user-select: none;
+  .custom-control-label::after {
+    transform: scale(1.25);
+  }
+  .custom-control-input:disabled {
+    ~ .custom-control-label {
+      cursor: not-allowed;
+    }
+    &:checked ~ .custom-control-label::before {
+      background-color: $gray-blue;
+      border-color: $gray-blue;
+    }
+    &:indeterminate ~ .custom-control-label::before {
+      background-color: $gray-blue;
+      border-color: $gray-blue;
+    }
+  }
+}

@@ -4,8 +4,11 @@
 
 <ng-template #tMenu>
   <ul>
-    <li (click)="this.router.navigateByUrl('examples/directive')">
+    <li (click)="this.navigate('examples/directive')">
       <p>Directive</p>
+    </li>
+    <li (click)="this.navigate('examples/form')">
+      <p>Forms</p>
     </li>
     <li (click)="this.collapse()">
       <em class="icon-setting"></em>

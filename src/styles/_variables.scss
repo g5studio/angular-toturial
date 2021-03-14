@@ -5,7 +5,8 @@ $body-color: $midnight;
 
 $grid-gutter-width: 1.5rem;
 
-$primary: $azure;
+// $primary: $azure;
+$primary: $logo-bg;
 $info: $water-grass;
 $warning: $aqua-green;
 $danger: $carmine;
@@ -116,7 +117,7 @@ $border-radius: 3px;
 $input-color: $midnight;
 $input-bg: $white;
 $input-border-color: $link-water;
-$input-focus-border-color: $bright-blue;
+$input-focus-border-color: $logo-bg;
 $form-feedback-invalid-color: $carmine;
 $enable-validation-icons: false;
 $input-disabled-bg: $gainsboro;

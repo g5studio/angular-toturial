@@ -23,4 +23,9 @@ export class MenuComponent extends PopupBox implements OnInit {
   ngOnInit(): void {
   }
 
+  public navigate(url: string) {
+    if (this.isOpen) { this.collapse() }
+    this.router.navigateByUrl(url);
+  }
+
 }

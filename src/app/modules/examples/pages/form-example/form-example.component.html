@@ -1,0 +1,6 @@
+<app-tab [default]="this.default" [tabs]="['基礎表單', 'Rxjs控制表單']">
+  <ng-container [ngSwitch]="this.currentTab">
+    <app-reactive-form-example *ngSwitchCase="1"></app-reactive-form-example>
+    <app-rxjs-form-example *ngSwitchCase="2"></app-rxjs-form-example>
+  </ng-container>
+</app-tab>

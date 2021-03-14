@@ -1,0 +1,23 @@
+<div *ngIf="this.$window.device$ | async as device" class="Tab">
+  <ul *ngIf="device !== this.$window.deviceType.Mobile; else tMobile">
+    <li *ngFor="let tab of this.tabs; let i = index" [class.Tab--active]="this.currentTab === i + 1">
+      <button (click)="this.navigate(i + 1)">{{tab}}</button>
+    </li>
+  </ul>
+  <div class="Tab__Container">
+    <ng-content></ng-content>
+  </div>
+</div>
+
+<ng-template #tMobile>
+  <app-dropdown>
+    {{this.tabs[this.currentTab - 1]}}
+    <ul menu>
+      <li *ngFor="let tab of this.tabs; let i = index">
+        <app-button (clickEvent)="this.navigate(i + 1)" white>
+          {{tab}}
+        </app-button>
+      </li>
+    </ul>
+  </app-dropdown>
+</ng-template>
