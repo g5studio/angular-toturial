@@ -8,7 +8,7 @@
     align-items: center;
     & > li {
       & > button {
-        font-size: map-get($font-level, "xl");
+        font-size: map-get($font-level, "lg");
         color: $blue-layer-7;
         padding: 0;
         &:hover {

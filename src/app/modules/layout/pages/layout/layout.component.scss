@@ -1,7 +1,12 @@
 @import "variables";
+@import "mixins";
 
 .Layout {
   overflow: hidden;
+  &__Container {
+    @include scroll();
+    height: calc(100vh - 4.5rem);
+  }
 }
 
 @media screen and (max-width: map-get($grid-breakpoints,"md")) {

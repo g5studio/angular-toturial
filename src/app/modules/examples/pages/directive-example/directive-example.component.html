@@ -1,4 +1,5 @@
-<h1 class="mb-3">Directive Example</h1>
+<h1 class="mb-2">Attrubite Directive</h1>
+<p class="mb-md-4_2 mb-3">可直接使用於DOM元件上，直接偵測DOM元件狀態並作出對應變化</p>
 <ng-container *ngIf="this.candle$ | async as candle">
-    <h1 [appHighlight]="candle">{{candle}}</h1>
+  <h1 [appHighlight]="candle">{{candle}}</h1>
 </ng-container>
