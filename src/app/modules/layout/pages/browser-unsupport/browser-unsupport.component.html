@@ -1,0 +1,5 @@
+<div class="BrowserUnsupport">
+  <h1>瀏覽器版本過舊</h1>
+  <p *ngIf="!this.$window.isMobileDevice" class="mt-3">當前瀏覽器版本為： {{this.agent}}</p>
+  <p *ngIf="this.$window.isMobileDevice" class="mt-3">當前手機瀏覽器版本為： {{this.agent}}</p>
+</div>

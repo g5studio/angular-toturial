@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WindowHelperService } from '@shared/services/window-helper.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public $window: WindowHelperService
+  ) { }
 
   ngOnInit(): void {
   }

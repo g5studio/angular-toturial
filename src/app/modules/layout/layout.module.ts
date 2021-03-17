@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { BrowserUnsupportComponent } from './pages/browser-unsupport/browser-unsupport.component';
 
 
 
@@ -10,7 +11,8 @@ import { MenuComponent } from './components/menu/menu.component';
   declarations: [
     LayoutComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    BrowserUnsupportComponent
   ],
   exports: [
     LayoutComponent
