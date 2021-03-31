@@ -1,8 +1,6 @@
-<div #tLayout class="container Layout">
-  <div #tHeader>
-    <app-header></app-header>
-  </div>
-  <div appResponsiveViewport [responseBuffer]="[tHeader]" class="p-3 Layout__Container scroll-bar">
+<div appResponsiveViewport #tLayout class="container Layout">
+  <app-header></app-header>
+  <div class="p-3 Layout__Container scroll-bar">
     <ng-content></ng-content>
   </div>
 </div>

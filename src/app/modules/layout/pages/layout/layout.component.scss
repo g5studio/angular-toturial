@@ -3,9 +3,10 @@
 
 .Layout {
   overflow: hidden;
+  height: 100vh;
   &__Container {
     @include scroll();
-    height: calc(100vh - 4.5rem);
+    height: calc(100% - 4.5rem);
   }
 }
 
