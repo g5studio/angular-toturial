@@ -7,6 +7,7 @@ import { SharedModule } from '@shared/shared.module';
 import { FormExampleComponent } from './pages/form-example/form-example.component';
 import { RxjsFormExampleComponent } from './pages/form-example/rxjs-form-example/rxjs-form-example.component';
 import { ReactiveFormExampleComponent } from './pages/form-example/reactive-form-example/reactive-form-example.component';
+import { CommonExampleComponent } from './pages/common-example/common-example.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ReactiveFormExampleComponent } from './pages/form-example/reactive-form
     DirectiveExampleComponent,
     FormExampleComponent,
     RxjsFormExampleComponent,
-    ReactiveFormExampleComponent
+    ReactiveFormExampleComponent,
+    CommonExampleComponent
   ],
   imports: [
     SharedModule,

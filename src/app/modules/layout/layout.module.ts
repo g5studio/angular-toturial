@@ -4,6 +4,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { BrowserUnsupportComponent } from './pages/browser-unsupport/browser-unsupport.component';
+import { SharedModule } from '@shared/shared.module';
 
 
 
@@ -18,7 +19,8 @@ import { BrowserUnsupportComponent } from './pages/browser-unsupport/browser-uns
     LayoutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class LayoutModule { }

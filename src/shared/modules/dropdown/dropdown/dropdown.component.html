@@ -1,5 +1,6 @@
 <div class="Dropdown">
-  <button #tDropdown (click)="this.expand(tDropdown)" class="form-control" [class.Dropdown--active]="this.isOpen" type="button">
+  <button (click)="this.isOpen ? this.close($event.target) : this.expand($event.target)" class="form-control"
+    type="button">
     <ng-content></ng-content>
   </button>
   <div *ngIf="this.isOpen" class="Dropdown__Container">

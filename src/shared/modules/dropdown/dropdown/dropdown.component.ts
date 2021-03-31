@@ -8,11 +8,16 @@ import { PopupBox } from '@shared/utilities/abstract/popup-box';
 })
 export class DropdownComponent extends PopupBox implements OnInit {
 
-  constructor() { 
+  constructor() {
     super();
   }
 
   ngOnInit(): void {
+  }
+
+  public close(target: HTMLElement) {
+    target.blur();
+    this.collapse();
   }
 
 }

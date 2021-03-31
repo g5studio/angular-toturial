@@ -1,7 +1,9 @@
 import { Injectable, ElementRef } from '@angular/core';
 import { EDevice } from '@shared/enums/general.enum';
 import { Subject, ReplaySubject } from 'rxjs';
-import { distinctUntilChanged, tap } from 'rxjs/operators';
+import { distinctUntilChanged } from 'rxjs/operators';
+import { ResizeObserver } from 'resize-observer';
+import { ResizeObserverEntry } from 'resize-observer/lib/ResizeObserverEntry';
 
 const DEVICE = {
   XS: 0,
@@ -33,6 +35,7 @@ export class WindowHelperService {
   public scrollTop$ = this.scrollTop.asObservable();
 
   public scrollTo(top: number) { this.scrollTop.next(top); }
+  public windowRsizeObserver = (callback: (element: ResizeObserverEntry) => {}) => new ResizeObserver(elements => elements.forEach(element => callback(element)));
 
   public isUnsupportBrowser() {
     const UserAgent = window.navigator.userAgent;
