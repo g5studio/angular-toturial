@@ -4,14 +4,15 @@
 
 <ng-template #tMenu>
   <ul>
-    <li (click)="this.navigate('examples/common')">
-      <p>Commons</p>
+    <li [class.active]="this.getIsActiveRoute(this.routerPath.Tutorial)"
+      (click)="this.navigate(this.routerPath.Tutorial)">
+      <em class="icon-library d-xl-none"></em>
+      <p>{{this.getRouterName(this.routerPath.Tutorial)}}</p>
     </li>
-    <li (click)="this.navigate('examples/directive')">
-      <p>Directive</p>
-    </li>
-    <li (click)="this.navigate('examples/form')">
-      <p>Forms</p>
+    <li [class.active]="this.getIsActiveRoute(this.routerPath.Example)" (click)="
+      this.navigate(this.routerPath.Example)">
+      <em class="icon-listview d-xl-none"></em>
+      <p>{{this.getRouterName(this.routerPath.Example)}}</p>
     </li>
     <li (click)="this.collapse()">
       <em class="icon-setting"></em>

@@ -38,6 +38,9 @@
                 "src/styles"
               ]
             },
+            "allowedCommonJsDependencies": [
+              "resize-observer"
+            ],
             "scripts": [],
             "lazyModules": []
           },

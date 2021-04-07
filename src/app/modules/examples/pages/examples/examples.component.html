@@ -1,0 +1,29 @@
+<div class="Examples row">
+  <div class="col-md-4 col-12">
+    <div #tCommon class="Examples__Card">
+      <div>
+        <h1>通用元件</h1>
+        <p>常見通用元件範例，如下拉選單、表格等</p>
+      </div>
+      <button (click)="this.router.navigateByUrl('examples/common')">前往</button>
+    </div>
+  </div>
+  <div class="col-md-4 col-12 mt-md-0 mt-3">
+    <div #tDirective class="Examples__Card">
+      <div>
+        <h1>自定義Directive</h1>
+        <p>屬性型指令改變一個元素的外觀或行為。例如，內建的 NgStyle 指令可以同時修改元素的多個樣式。</p>
+      </div>
+      <button (click)="this.router.navigateByUrl('examples/directive')">前往</button>
+    </div>
+  </div>
+  <div class="col-md-4 col-12 mt-md-0 mt-3">
+    <div #tForm class="Examples__Card">
+      <div>
+        <h1>自訂表單</h1>
+        <p>使用Angular強大的 Reative Form 製作表單功能，與如何使用rxjs對表單行為進行控管</p>
+      </div>
+      <button (click)="this.router.navigateByUrl('examples/form')">前往</button>
+    </div>
+  </div>
+</div>

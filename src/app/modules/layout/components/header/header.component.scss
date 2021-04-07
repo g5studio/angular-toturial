@@ -22,6 +22,12 @@
     & > p {
       font-size: map-get($font-level, "sm");
       color: $gray-blue;
+      em {
+        font-size: map-get($font-level, "sm");
+        color: $gray-blue;
+        font-style: normal;
+        cursor: auto;
+      }
     }
   }
 }

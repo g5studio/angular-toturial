@@ -81,6 +81,13 @@
   }
 }
 
+.active {
+  em,
+  p {
+    color: $primary !important;
+  }
+}
+
 @media screen and (min-width: map-get($grid-breakpoints, "md")) {
   .Menu {
     &__Mobile {
