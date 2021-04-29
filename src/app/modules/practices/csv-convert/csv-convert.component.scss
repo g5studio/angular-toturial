@@ -1,0 +1,55 @@
+.CsvConvert {
+  padding: 3rem;
+
+  &__Table {
+    margin-top: 3rem;
+    table {
+      margin-top: 1rem;
+      thead {
+        th {
+          height: 4rem;
+          vertical-align: middle;
+          padding: 0 1rem;
+        }
+      }
+
+      tbody {
+        td {
+          height: 3rem;
+          vertical-align: middle;
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+
+  &__Convert {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    & > section {
+      flex: 1;
+      max-width: 100%;
+      width: auto;
+      textarea {
+        height: 150px;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+      }
+    }
+
+    & > button {
+      display: inline-block;
+      padding: 1rem;
+      margin: 0 1.5rem;
+      width: auto;
+      &::after {
+        content: ">";
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

@@ -14,6 +14,11 @@
       <em class="icon-listview d-xl-none"></em>
       <p>{{this.getRouterName(this.routerPath.Example)}}</p>
     </li>
+    <li [class.active]="this.getIsActiveRoute(this.routerPath.Practice)" (click)="
+    this.navigate(this.routerPath.Practice)">
+      <em class="icon-listview d-xl-none"></em>
+      <p>{{this.getRouterName(this.routerPath.Practice)}}</p>
+    </li>
     <li (click)="this.collapse()">
       <em class="icon-setting"></em>
       系統設置

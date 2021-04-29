@@ -17,6 +17,10 @@ const routes: Routes = [
       {
         path: ERouterPath.Tutorial,
         loadChildren: () => import('./modules/tutorial/tutorial.module').then(m => m.TutorialModule)
+      },
+      {
+        path: ERouterPath.Practice,
+        loadChildren: () => import('./modules/practices/practices.module').then(m => m.PracticesModule)
       }
     ]
   },

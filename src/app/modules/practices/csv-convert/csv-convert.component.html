@@ -1,0 +1,30 @@
+<div class="CsvConvert">
+  <div class="CsvConvert__Convert">
+    <section>
+      <h1>CSV DATA</h1>
+      <textarea [(ngModel)]="this.csvData"></textarea>
+    </section>
+    <button type="button" (click)="this.covert(this.datas)">Convert</button>
+    <section>
+      <h1>JSON DATA</h1>
+      <textarea disabled [value]="this.jsonData | json"></textarea>
+    </section>
+  </div>
+  <div class="CsvConvert__Table">
+    <h1>Table</h1>
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let field of this.fields">
+            <h1>{{field}}</h1>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of this.jsonData;">
+          <td *ngFor="let field of this.fields">{{data[field] || '-'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
