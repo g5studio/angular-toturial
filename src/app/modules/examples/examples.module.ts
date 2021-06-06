@@ -9,6 +9,8 @@ import { RxjsFormExampleComponent } from './pages/form-example/rxjs-form-example
 import { ReactiveFormExampleComponent } from './pages/form-example/reactive-form-example/reactive-form-example.component';
 import { CommonExampleComponent } from './pages/common-example/common-example.component';
 import { ExamplesComponent } from './pages/examples/examples.component';
+import { OverlayExampleComponent } from './pages/overlay-example/overlay-example.component';
+import { ExampleDialogComponent } from './components/example-dialog/example-dialog.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { ExamplesComponent } from './pages/examples/examples.component';
     RxjsFormExampleComponent,
     ReactiveFormExampleComponent,
     CommonExampleComponent,
-    ExamplesComponent
+    ExamplesComponent,
+    OverlayExampleComponent,
+    ExampleDialogComponent
   ],
   imports: [
     SharedModule,

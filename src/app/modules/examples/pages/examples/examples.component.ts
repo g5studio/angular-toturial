@@ -13,6 +13,7 @@ export class ExamplesComponent implements AfterViewInit {
   @ViewChild('tCommon') common: ElementRef;
   @ViewChild('tDirective') directive: ElementRef;
   @ViewChild('tForm') form: ElementRef;
+  @ViewChild('tOverlay') overlay: ElementRef;
 
   constructor(
     public router: Router,
@@ -24,7 +25,9 @@ export class ExamplesComponent implements AfterViewInit {
     switchMap(() => timer(500)),
     tap(() => this.playAnimation(this.directive.nativeElement)),
     switchMap(() => timer(500)),
-    tap(() => this.playAnimation(this.form.nativeElement))
+    tap(() => this.playAnimation(this.form.nativeElement)),
+    switchMap(() => timer(500)),
+    tap(() => this.playAnimation(this.overlay.nativeElement))
   )
 
   ngAfterViewInit(): void {

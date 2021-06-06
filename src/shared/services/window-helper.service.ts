@@ -1,5 +1,5 @@
 import { Injectable, ElementRef } from '@angular/core';
-import { EDevice } from '@shared/enums/general.enum';
+import { EDevice } from '@shared/utilities/enums/general.enum';
 import { Subject, ReplaySubject } from 'rxjs';
 import { distinctUntilChanged } from 'rxjs/operators';
 import { ResizeObserver } from 'resize-observer';

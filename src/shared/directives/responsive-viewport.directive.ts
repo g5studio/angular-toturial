@@ -3,7 +3,7 @@ import { tap, takeUntil } from 'rxjs/operators';
 import { Directive, ElementRef, Renderer2, OnInit, Input } from '@angular/core';
 import { WindowHelperService } from '@services/window-helper.service';
 import { UnsubOndestroy } from '@utilities/abstract/unsub-ondestroy';
-import { EDevice } from '@shared/enums/general.enum';
+import { EDevice } from '@shared/utilities/enums/general.enum';
 
 @Directive({
   selector: '[appResponsiveViewport]',

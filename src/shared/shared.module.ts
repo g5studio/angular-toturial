@@ -1,3 +1,4 @@
+import { OverlayModule } from './modules/overlay/overlay.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,7 +18,8 @@ import { DropdownModule } from './modules/dropdown/dropdown.module';
     CommonModule,
     GeneralsModule,
     ButtonsModule,
-    DropdownModule
+    DropdownModule,
+    OverlayModule
   ],
   exports: [
     DirectivesModule,
@@ -25,7 +27,8 @@ import { DropdownModule } from './modules/dropdown/dropdown.module';
     ReactiveFormsModule,
     GeneralsModule,
     ButtonsModule,
-    DropdownModule
+    DropdownModule,
+    OverlayModule
   ]
 })
 export class SharedModule { }

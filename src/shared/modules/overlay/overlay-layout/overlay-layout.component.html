@@ -1,0 +1,5 @@
+<section class="OverlayLayout">
+  <div *ngFor="let dialog of this.$overlay.dialogs" appActiveDialog [dialog]="dialog" class="OverlayLayout__Dialog">
+    <ng-template [ngComponentOutlet]="dialog.component"></ng-template>
+  </div>
+</section>

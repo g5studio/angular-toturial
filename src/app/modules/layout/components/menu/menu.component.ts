@@ -1,7 +1,7 @@
 import { RouterMap } from './../../../../../shared/utilities/maps/router.map';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EDevice } from '@shared/enums/general.enum';
+import { EDevice } from '@shared/utilities/enums/general.enum';
 import { WindowHelperService } from '@shared/services/window-helper.service';
 import { PopupBox } from '@shared/utilities/abstract/popup-box';
 import { ERouterPath } from '@shared/utilities/maps/router.map';
