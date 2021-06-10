@@ -2,10 +2,24 @@
 @import "mixins";
 
 .Dialog {
-  padding: 1.5rem;
+  @include dropdown-shadow;
   background-color: $white;
   width: 50rem;
   max-height: 55rem;
+  &__Header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid $light-gray;
+    &::ng-deep {
+      h1,
+      em {
+        margin: 0;
+        font-size: map-get($font-level, "lg");
+      }
+    }
+  }
 }
 
 @media screen and (max-width: map-get($grid-breakpoints, "md")) {

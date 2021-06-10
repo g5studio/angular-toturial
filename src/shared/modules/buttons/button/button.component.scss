@@ -4,6 +4,7 @@
 button {
   width: 100%;
   height: 3rem;
+  padding: 0 1rem;
   background-color: $blue-layer-5;
   font-size: map-get($font-level, "md");
   &::ng-deep {
@@ -30,6 +31,7 @@ button {
 .white {
   @include border($white);
   background-color: inherit;
+  border: 1px solid $blue-layer-5;
   color: $midnight;
   &:hover {
     background-color: $white;

@@ -1,4 +1,32 @@
-<app-dialog>
-  test
-  <app-button (clickEvent)="this.toggleDialog()"></app-button>
+<app-dialog (OnClose)="this.close()">
+  <h1 title>{{this.title}}</h1>
+  <form (ngSubmit)="this.submit()" [formGroup]="this.form" class="row">
+    <div class="col-4">
+      <label for="oldPassword">舊密碼</label>
+      <input formControlName="oldPassword" id="oldPassword" class="form-control" type="password">
+    </div>
+    <div class="col-4">
+      <label for="password">新密碼</label>
+      <input formControlName="password" id="password" class="form-control" type="password">
+    </div>
+    <div class="col-12 mt-3">
+      <div class="row">
+        <div class="col-auto">
+          <app-button (clickEvent)="this.toggleDialog()">忘記密碼</app-button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mt-4">
+      <div class="d-flex flex-row justify-content-end">
+        <ul class="d-flex flex-row align-items-center">
+          <li class="mr-2">
+            <app-button white (clickEvent)="this.close()">取消</app-button>
+          </li>
+          <li>
+            <app-button [type]="'submit'" [disabled]="this.form.invalid">提交</app-button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
 </app-dialog>

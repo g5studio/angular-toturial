@@ -1,3 +1,5 @@
+import { Injector } from "@angular/core";
+
 export interface IDialog<T> {
   id: string;
   component: any;

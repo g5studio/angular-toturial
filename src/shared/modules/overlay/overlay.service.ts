@@ -1,8 +1,9 @@
 import { IDialog, IDialogConfig } from '@utilities/interfaces/general.interface';
-import { Injectable } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 import { EAction } from '@shared/utilities/enums/general.enum';
+import { DialogComponent } from '@shared/modules/overlay/dialog/dialog.component';
 
 interface DialogAction {
   action: EAction;
@@ -14,11 +15,14 @@ interface DialogAction {
 })
 export class OverlayService {
 
-  constructor() {
+  constructor(
+    private injector: Injector
+  ) {
     this.dialogAction$.subscribe(action => this.resolveDialogAction(action));
   }
 
   private dialogQue = new Set<IDialog<any>>();
+  private dialogInjectorMap = new Map<string, Injector>();
   private dialogAction = new BehaviorSubject<DialogAction>(null);
   private dialogAction$ = this.dialogAction.asObservable().pipe(
     filter(action => action?.dialog?.component)
@@ -26,7 +30,11 @@ export class OverlayService {
 
   get dialogs() { return this.dialogQue; }
 
-  public toggleDialog(dialog: any, config?: IDialogConfig<any>) {
+  public getDialogInjector(dialog: IDialog<any>) {
+    return this.dialogInjectorMap.get(dialog.id);
+  }
+
+  public toggleDialog<T>(dialog: any, config?: IDialogConfig<T>) {
     this.dialogAction.next({
       action: EAction.Create,
       dialog: {
@@ -52,12 +60,26 @@ export class OverlayService {
   }
 
   private createDialog(dialog: IDialog<any>) {
-    !this.dialogQue.has(dialog) ? this.dialogQue.add(dialog) :
+    if (!this.dialogQue.has(dialog)) {
+      this.dialogQue.add(dialog);
+      this.dialogInjectorMap.set(dialog.id, Injector.create({
+        providers: [{
+          provide: DialogComponent,
+          useValue: dialog
+        }],
+        parent: this.injector
+      }));
+    } else {
       console.error(`dialog ${dialog.id} already exist ! `);
+    }
   }
 
   private deleteDialog(dialog: IDialog<any>) {
-    this.dialogQue.has(dialog) ? this.dialogQue.delete(dialog) :
+    if (this.dialogQue.has(dialog)) {
+      this.dialogQue.delete(dialog);
+      this.dialogInjectorMap.delete(dialog.id);
+    } else {
       console.error(`dialog ${dialog.id} not found !`);
+    }
   }
 }

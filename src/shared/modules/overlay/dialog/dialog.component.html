@@ -1,3 +1,10 @@
 <section class="Dialog">
-  <ng-content></ng-content>
+  <div class="Dialog__Header p-4">
+    <ng-content select="[title]"></ng-content>
+    <em (click)="this.OnClose.emit()" *ngIf="this.disableClose === undefined || this.disableClose === false"
+      class="icon-close"></em>
+  </div>
+  <div class="Dialog__Container p-4">
+    <ng-content></ng-content>
+  </div>
 </section>

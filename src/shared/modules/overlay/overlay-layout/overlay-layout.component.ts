@@ -6,11 +6,11 @@ import { OverlayService } from '../overlay.service';
   templateUrl: './overlay-layout.component.html',
   styleUrls: ['./overlay-layout.component.scss']
 })
-export class OverlayLayoutComponent {
+export class OverlayLayoutComponent implements OnInit {
 
   constructor(
-    public $overlay: OverlayService
+    public $overlay: OverlayService,
   ) { }
 
-
+  ngOnInit() { }
 }
